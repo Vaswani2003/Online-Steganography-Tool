@@ -11,8 +11,6 @@ current_voice_line = fn.get_voice_line()
 
 st.write(f"<h3 style='text-align: center;'> {current_voice_line}</h3>", unsafe_allow_html=1)
 
-# Encryption Section
-
 st.header('Encryption')
 
 encryption_uploaded_file = st.file_uploader("Upload image", type=['jpg', 'jpeg'], key='en')
@@ -43,7 +41,6 @@ if Encrypt_btn:
         _, stegno_image_buffer = cv2.imencode(".jpg", stegno_image)
         stegno_image_bytes = stegno_image_buffer.tobytes()
 
-        # Download Button for Encrypted Image
         encrypted_image_filename = "encrypted_image.jpg"
         st.download_button(
             label="Download Encrypted Image",
@@ -51,8 +48,6 @@ if Encrypt_btn:
             file_name=encrypted_image_filename,
             mime="image/jpeg"
         )
-
-# Decryption Section
 
 st.header('Decryption')
 
