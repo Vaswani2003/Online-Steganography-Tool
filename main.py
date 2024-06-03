@@ -2,6 +2,7 @@ import streamlit as st
 import random
 import png
 import base64
+import methods
 
 
 def encode_message_as_bytestring(message: str):
